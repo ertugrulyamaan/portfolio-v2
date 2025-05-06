@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Ertuğrul Yaman",
+    "subtitle": "FULL STACK DEVELOPER",
+    "description": "Bir şeyler yapalım."
+  },
+  "about": {
+    "title": "Ben Kimim?",
+    "intro": "Full-stack geliştirici olarak Java ve JavaScript teknolojileriyle çalışıyorum. Üretmeyi seven, sürekli öğrenen ve yazılımı bir zanaat olarak gören biriyim.",
+    "technologies": "Teknolojiler",
+    "story": {
+      "title": "Benim Hikayem",
+      "content": "Yazılıma olan ilgim çocuklukta başladı. Şu anda bir startup'ta full-stack geliştirici olarak çalışıyorum. Amacım hem backend mimarisi hem de kullanıcı deneyimi konusunda derinleşmek. Disiplinli çalışmayı ve yazılım kalitesine önem vermeyi öncelik haline getiriyorum."
+    },
+    "cta": {
+      "info": "Daha fazla bilgi için aşağıdaki bağlantılara göz atabilirsin:",
+      "cv": "CV'yi indir"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Blog yazılarım",
+    "readOnMedium": "Medium'da oku"
+  }
+}

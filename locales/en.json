@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Ertuğrul Yaman",
+    "subtitle": "FULL STACK DEVELOPER",
+    "description": "Let's build something amazing."
+  },
+  "about": {
+    "title": "Who Am I?",
+    "intro": "I work as a full-stack developer with Java and JavaScript technologies. I am someone who loves to create, continuously learns, and sees software as a craft.",
+    "technologies": "Technologies",
+    "story": {
+      "title": "My Story",
+      "content": "My interest in software began in childhood. I currently work as a full-stack developer at a startup. My goal is to deepen my knowledge in both backend architecture and user experience. I prioritize disciplined work and software quality."
+    },
+    "cta": {
+      "info": "Check out the links below for more information:",
+      "cv": "Download CV"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "My Blog Posts",
+    "readOnMedium": "Read on Medium"
+  }
+} 
