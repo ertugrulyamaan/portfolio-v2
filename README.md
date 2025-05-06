@@ -1,6 +1,21 @@
-# Nuxt Minimal Starter
+# Portfolio Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is my personal portfolio website built with Nuxt.js. The website showcases my projects, skills, and professional experience.
+
+## Features
+
+- Modern and responsive design
+- Project showcase
+- Skills and experience section
+- Contact information
+- Blog section (coming soon)
+
+## Tech Stack
+
+- Nuxt.js
+- Vue.js
+- TailwindCSS
+- TypeScript
 
 ## Setup
 
@@ -72,4 +87,23 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Project Structure
+
+```
+├── components/     # Vue components
+├── pages/         # Application pages
+├── public/        # Static assets
+├── styles/        # Global styles
+└── types/         # TypeScript type definitions
+```
+
+## License
+
+MIT License - feel free to use this code for your own portfolio!
+
+## Contact
+
+Feel free to reach out to me through:
+- [GitHub](https://github.com/ertugrulyamaan)
+- [LinkedIn](https://www.linkedin.com/in/ertugrulyamaan/)
+- [Email](mailto:ertugrulyaman99@gmail.com)
