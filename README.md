@@ -93,7 +93,7 @@ bun run preview
 ├── components/     # Vue components
 ├── pages/         # Application pages
 ├── public/        # Static assets
-├── styles/        # Global styles
+├── assets/        # Global styles and images
 └── types/         # TypeScript type definitions
 ```
 
