@@ -17,53 +17,50 @@ const isModalOpen = ref(false)
 const selectedProject = ref<Project | null>(null)
 
 const projects: Record<string, Project> = {
-  aiGenerator: {
-    id: 'aiGenerator',
-    title: 'AI Image Generator',
-    description: 'OpenAI API kullanarak metin girişinden görsel üreten yapay zeka uygulaması.',
-    image: 'https://lorempixel.com/400/200',
-    technologies: ['React', 'Node.js', 'OpenAI API', 'TailwindCSS'],
+  biletandmore: {
+    id: 'biletandmore',
+    title: 'Biletandmore',
+    description: 'BiletandMore deneyim turizm sitesi. Deneyimlerin arama yapılması, detaylı bilgi alınması ve yorumlarının görüntülenmesi.',
+    image: 'https://picsum.photos/200/300',
+    technologies: ['Nuxt', 'Bootstrap', 'Pinia', 'Axios'],
     features: [
-      'Metin tabanlı görsel üretimi',
-      'Gelişmiş prompt optimizasyonu',
-      'Görsel kaydetme ve paylaşma',
-      'Kullanıcı galerisi'
+      'Deneyimlerin arama yapılması',
+      'Detaylı bilgi alınması',
+      'Yorumların görüntülenmesi',
     ],
-    demoUrl: 'https://ai-generator.example.com',
-    githubUrl: 'https://github.com/username/ai-generator',
-    color: 'blue'
+    demoUrl: 'https://www.biletandmore.com/',
+    githubUrl: '',
+    color: ' group-hover:text-purple-400'
   },
-  ecommerce: {
-    id: 'ecommerce',
-    title: 'E-Commerce Dashboard',
-    description: 'Gelişmiş analitik ve raporlama özellikleriyle modern e-ticaret yönetim paneli.',
-    image: 'https://lorempixel.com/400/200',
-    technologies: ['Vue.js', 'Firebase', 'Chart.js'],
+  minflix: {
+    id: 'minflix',
+    title: 'Minflix',
+    description: 'Güncel ya da eski filmlerin arama yapılması, fragmanının izlenmesi ve konusu hakkında bilgi alınması.',
+    image: 'https://picsum.photos/200/300',
+    technologies: ['React', 'Axios', 'TailwindCSS'],
     features: [
-      'Gerçek zamanlı satış takibi',
-      'Detaylı analitik raporları',
-      'Stok yönetimi',
-      'Müşteri segmentasyonu'
+      'Güncel ya da eski filmlerin arama yapılması',
+      'Fragmanının izlenmesi',
+      'Konusu hakkında bilgi alınması',
     ],
-    demoUrl: 'https://ecommerce-dashboard.example.com',
-    githubUrl: 'https://github.com/username/ecommerce-dashboard',
-    color: 'cyan'
+    demoUrl: 'https://minflix-ertu.vercel.app/',
+    githubUrl: 'https://github.com/ertugrulyamaan/minflix',
+    color: ' group-hover:text-red-400'
   },
-  fitness: {
-    id: 'fitness',
-    title: 'Fitness Tracker App',
-    description: 'Kişiselleştirilmiş egzersiz programları ve beslenme takibi yapan mobil uygulama.',
-    image: 'https://lorempixel.com/400/200',
-    technologies: ['React Native', 'Redux', 'TypeScript'],
+  rezervasyonYapp: {
+    id: 'rezervasyonYapp',
+    title: 'RezervasyonYapp',
+    description: 'Tur, aktivite ve etkinliklerinizi kolayca tek panelden yönetin.',
+    image: 'https://picsum.photos/200/300',
+    technologies: ['Nuxt', 'Vuetify', 'Chart.js', 'Pinia', 'Axios'],
     features: [
-      'Özelleştirilmiş antrenman planları',
-      'Beslenme takibi ve önerileri',
-      'İlerleme grafikleri',
-      'Sosyal paylaşım özellikleri'
+      'Rezervasyonları, müşteri etkileşimlerini ve geri bildirimleri tek panelden yönetin.',
+      'Tur, aktivite ve etkinliklerinizi kolayca yayınlayın.',
+      'Müşteri etkileşimlerini ve geri bildirimleri tek panelden yönetin...',
     ],
-    demoUrl: 'https://fitness-tracker.example.com',
-    githubUrl: 'https://github.com/username/fitness-tracker',
-    color: 'sky'
+    demoUrl: 'https://www.rezervasyony.app/',
+    githubUrl: '',
+    color: 'group-hover:text-violet-400'
   }
 }
 
@@ -113,7 +110,7 @@ const closeModal = () => {
           <div class="p-6 flex-1 flex flex-col">
             <h3 
               class="text-xl font-bold text-white mb-3 transition-colors"
-              :class="`group-hover:text-${project.color}-400`"
+              :class="project.color"
             >
               {{ project.title }}
             </h3>

@@ -6,6 +6,16 @@ const currentTitleIndex = ref(0)
 const currentTitle = ref(titles[0])
 const isTyping = ref(true)
 
+
+const techs = [
+  { name: 'Nuxt', icon: '▲' },
+  { name: 'Vue 3', icon: '⚡' },
+  { name: 'TypeScript', icon: '📘' },
+  { name: 'Java', icon: '☕' },
+  { name: 'Spring Boot', icon: '🌱' },
+]
+
+
 onMounted(() => {
   startTitleAnimation()
 })
@@ -45,12 +55,12 @@ const startTitleAnimation = async () => {
         </p>
 
         <div class="flex flex-wrap mt-8 space-x-4">
-          <div v-for="(tech, index) in ['Nuxt', 'Vue 3', 'TypeScript', 'Java', 'Spring Boot']"
-               :key="tech"
+          <div v-for="(tech, index) in techs"
+               :key="tech.name"
                class="tech-badge mb-4 mr-4"
                :style="{ animationDelay: `${index * 0.1}s` }">
-            <span v-if="tech === 'Nuxt'" class="text-emerald-500 mr-2">▲</span>
-            <span>{{ tech }}</span>
+            <span class="text-emerald-500 mr-2">{{ tech.icon }}</span>
+            <span>{{ tech.name }}</span>
           </div>
         </div>
       </div>
@@ -91,6 +101,7 @@ const startTitleAnimation = async () => {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .tech-badge:hover {
