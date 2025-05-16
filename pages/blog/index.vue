@@ -2,7 +2,15 @@
 import { ref, computed } from 'vue'
 const { locale } = useI18n()
 
-const activeTab = ref(0)
+
+interface Post {
+  title: string
+  description: string
+  link: string
+  category: string
+}
+
+const activeTab:Ref<number> = ref(0)
 
 const tabs = computed(() => [
   { label: locale.value === 'tr' ? 'Tümü' : 'All' },
@@ -10,7 +18,7 @@ const tabs = computed(() => [
   { label: 'Nuxt' }
 ])
 
-const javaPostsTR = [
+const javaPostsTR: Post[] = [
   {
     title: 'Spring Boot ile Mikroservis Mimarisi',
     description: 'Mikroservis mimarisinin temel prensipleri ve Spring Boot ile nasıl uygulanacağı hakkında detaylı bir rehber.',
@@ -25,7 +33,7 @@ const javaPostsTR = [
   }
 ]
 
-const javaPostsEN = [
+const javaPostsEN: Post[] = [
   {
     title: 'Microservice Architecture with Spring Boot',
     description: 'A detailed guide on microservice architecture principles and how to implement them with Spring Boot.',
@@ -40,7 +48,7 @@ const javaPostsEN = [
   }
 ]
 
-const nuxtPostsTR = [
+const nuxtPostsTR: Post[] = [
   {
     title: 'Nuxt 3 ile SEO Optimizasyonu',
     description: 'Nuxt 3 projelerinde SEO performansını artırmak için kullanabileceğiniz en iyi pratikler ve teknikler.',
@@ -55,7 +63,7 @@ const nuxtPostsTR = [
   }
 ]
 
-const nuxtPostsEN = [
+const nuxtPostsEN: Post[] = [
   {
     title: 'SEO Optimization with Nuxt 3',
     description: 'Best practices and techniques you can use to improve SEO performance in Nuxt 3 projects.',

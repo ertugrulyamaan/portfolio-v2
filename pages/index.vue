@@ -17,5 +17,4 @@
 
 
 <style>
-/* Global CSS veya Tailwind config burada yapılabilir */
 </style>

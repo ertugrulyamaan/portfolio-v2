@@ -170,17 +170,14 @@ const projects = ref<Project[]>([
   opacity: 0;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hover efektleri için ek stiller */
 .group:hover {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
-/* Teknoloji etiketleri için hover efekti */
 .group:hover .technology-tag {
   transform: translateY(-2px);
 }

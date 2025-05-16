@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const titles = ['Full Stack Developer', 'Backend Developer', 'Frontend Developer']
-const currentTitleIndex = ref(0)
-const currentTitle = ref(titles[0])
-const isTyping = ref(true)
+const titles:string[] = ['Full Stack Developer', 'Backend Developer', 'Frontend Developer']
+const currentTitleIndex:Ref<number> = ref(0)
+const currentTitle:Ref<string> = ref(titles[0])
+const isTyping:Ref<boolean> = ref(true)
 
 
-const techs = [
+const techs: { name: string, icon: string }[] = [
   { name: 'Nuxt', icon: '▲' },
   { name: 'Vue 3', icon: '⚡' },
   { name: 'TypeScript', icon: '📘' },
@@ -20,14 +20,14 @@ onMounted(() => {
   startTitleAnimation()
 })
 
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+const sleep = (ms:number) => new Promise(resolve => setTimeout(resolve, ms))
 
 const startTitleAnimation = async () => {
   while (true) {
     isTyping.value = true
-    await sleep(3000) // Yazma animasyonunun tamamlanmasını bekle
+    await sleep(3000)
     isTyping.value = false
-    await sleep(500) // Silme animasyonu için kısa bekle
+    await sleep(500)
     
     currentTitleIndex.value = (currentTitleIndex.value + 1) % titles.length
     currentTitle.value = titles[currentTitleIndex.value]

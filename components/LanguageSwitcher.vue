@@ -1,12 +1,10 @@
-<script setup>
-const { locale, locales } = useI18n()
+<script setup lang="ts">
+const { locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
-// Dil kodlarına göre bayrak emojileri
-const flags = {
+const flags: { [key: string]: string } = {
   'tr': '🇹🇷',
   'en': '🇬🇧',
-  // Diğer diller için buraya ekleyebilirsiniz
 }
 </script>
 

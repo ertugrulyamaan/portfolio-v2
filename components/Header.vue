@@ -1,5 +1,5 @@
-<script setup>
-const menuItems = [
+<script setup lang="ts">
+const menuItems: { href: string, text: string }[] = [
   { href: '/projects', text: 'Projects' },
   { href: '/blog', text: 'Blog' },
   { href: '/about', text: 'About' }
@@ -23,7 +23,7 @@ const menuItems = [
                       v-for="(item, index) in menuItems" 
                       :key="item.href"
                       :href="item.href"
-                      class="text-gray-200 hover:text-gray-400 transition-colors cursor-pointer">
+                      class="text-gray-200 hover:text-gray-400 hover:underline transition-colors cursor-pointer">
                       {{ item.text }}
                     </a>
                 </div>

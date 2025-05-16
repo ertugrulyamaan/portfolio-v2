@@ -4,7 +4,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <!-- Copyright Section -->
                 <div class="text-center md:text-left">
-                    <p class="text-lg">© 2024 Ertuğrul Yaman</p>
+                    <p class="text-lg">© 2025 Ertuğrul Yaman</p>
                     <p class="text-sm text-gray-400">All rights reserved.</p>
                 </div>
 

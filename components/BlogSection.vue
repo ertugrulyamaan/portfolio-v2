@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const activeTab:Ref<number> = ref(0)
+
+const tabs: { label: string }[] = [
+  { label: 'Tümü' },
+  { label: 'Java' },
+  { label: 'Nuxt' }
+]
+</script>
 <template>
   <div class="max-w-4xl mx-auto px-4 py-10">
     <div class="flex border-b border-neutral-800 mb-6">
@@ -38,17 +49,6 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const activeTab = ref(0)
-
-const tabs = [
-  { label: 'Tümü' },
-  { label: 'Java' },
-  { label: 'Nuxt' }
-]
-</script>
 
 <style>
 .animate-fadeIn {

@@ -10,11 +10,11 @@ interface Project {
   features: string[]
   demoUrl?: string
   githubUrl?: string
-  color: string // Her proje için tema rengi
+  color: string
 }
 
-const isModalOpen = ref(false)
-const selectedProject = ref<Project | null>(null)
+const isModalOpen:Ref<boolean> = ref(false)
+const selectedProject:Ref<Project | null> = ref(null)
 
 const projects: Record<string, Project> = {
   biletandmore: {

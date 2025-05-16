@@ -1,6 +1,24 @@
+<script setup lang="ts">
+const technologies: string[] = [
+  'Java',
+  'Spring Boot',
+  'Vue.js',
+  'Nuxt 3',
+  'Git',
+  'PostgreSQL',
+  'TypeScript',
+  'Tailwind CSS',
+]
+
+const links: { text: string, url: string }[] = [
+  { text: 'LinkedIn', url: '#' },
+  { text: 'GitHub', url: '#' },
+  { text: "CV'yi indir", url: '#' }
+]
+</script>
 <template>
   <Header />
-  <div class="px-6 py-16 max-w-4xl mx-auto">
+  <div class="px-6 py-16 max-w-4xl mx-auto min-h-screen">
     <!-- Başlık ve Giriş -->
     <section class="text-center mb-16">
       <h1 class="text-4xl font-bold text-white mb-4 animate-fade-in">{{ $t('about.title') }}</h1>
@@ -44,46 +62,8 @@
       </div>
     </section>
   </div>
-
-  <!-- Dil Değiştirici -->
-  <div class="fixed top-4 right-4 flex gap-2">
-    <button 
-      v-for="locale in availableLocales" 
-      :key="locale.code"
-      @click="switchLanguage(locale.code)"
-      class="px-3 py-1 rounded bg-neutral-800 text-green-400 hover:bg-neutral-700 transition-colors"
-      :class="{ 'bg-neutral-700': currentLocale === locale.code }">
-      {{ locale.name }}
-    </button>
-  </div>
 </template>
 
-<script setup>
-const { locale, locales } = useI18n()
-const switchLanguage = (code) => {
-  locale.value = code
-}
-
-const currentLocale = computed(() => locale.value)
-const availableLocales = computed(() => locales.value)
-
-const technologies = [
-  'Java',
-  'Spring Boot',
-  'Vue.js',
-  'Nuxt 3',
-  'Git',
-  'PostgreSQL',
-  'TypeScript',
-  'Tailwind CSS',
-]
-
-const links = [
-  { text: 'LinkedIn', url: '#' },
-  { text: 'GitHub', url: '#' },
-  { text: "CV'yi indir", url: '#' }
-]
-</script>
 
 <style>
 @keyframes fadeIn {
@@ -156,8 +136,8 @@ const links = [
 
 .tech-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2); /* green-400 rengi ile uyumlu bir glow efekti */
-  background-color: rgba(38, 38, 38, 1); /* biraz daha koyu bir arka plan */
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+  background-color: rgba(38, 38, 38, 1);
   cursor: pointer;
 }
 </style>
